@@ -10,6 +10,10 @@
 
     <!--Bootstrap Icons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+
+    <!--Aos-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!--My CSS-->
     <link rel="stylesheet" href="style.css" />
     <title>My Portfolio | Rico Alamsyah</title>
@@ -47,7 +51,7 @@
     <section class="jumbotron text-center">
       <img src="img/ricooyuhuu-1610744888422 (3).jpg" alt="Rico Alamsyah" width="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Rico Alamsyah</h1>
-      <p class="lead">UI/UX Designer | WordPress dev</p>
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -61,20 +65,21 @@
     <!--About-->
     <section id="about">
       <class="container">
-        <div class="row text-center mb-3">
+        <div class="row fw-bold text-center mb-3">
           <div class="col">
             <h2>About Me</h2>
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000">
             <p>A Fresh Graduate Bachelor of Information System at Budi Luhur!</p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
             <p>A humble and dedicated person who extremely motivated to constantly develop my skill and grow professionally</p>
           </div>
         </div>
-        <div class="row justify-content-center fs-4 text-center">
+
+        <div class="row fw-bold justify-content-center fs-5 text-center">
           <div class="col-md-2">
             <div class="about__buttons">
               <a download="" href="assets/CV rico .pdf" class="text-dark button--flex">
@@ -105,26 +110,26 @@
         </div>
         <div class="row">
           <div class="col-md-4 mb-3 text-center">
-            <div class="card">
-              <img src="img/Gallery/Group 5.png" class="card-img-top" alt="gallery 1" />
+            <div class="card" data-aos="flip-right" data-aos-duration="500">
+              <img src="img/Gallery/Glassy Card.png" class="card-img-top" alt="gallery 1" />
               <div class="card-body">
                 <p class="card-text">Glassy Card Design</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3 text-center">
-            <div class="card">
-              <img src="img/Gallery/Dribbble shot HD - 1 (1).png" class="card-img-top" alt="gallery 1" />
+            <div class="card" data-aos="flip-right" data-aos-duration="500" data-aos-delay="50">
+              <img src="img/Gallery/Food Ordering App.png" class="card-img-top" alt="gallery 1" />
               <div class="card-body">
-                <p class="card-text">Food Ordering Mobile App Design</p>
+                <p class="card-text">Food Ordering Mobile App</p>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-3 text-center">
-            <div class="card">
-              <img src="img/Gallery/ARTBOARD.png" class="card-img-top" alt="gallery 1" />
+            <div class="card" data-aos="flip-right" data-aos-duration="500" data-aos-delay="100">
+              <img src="img/Gallery/E-learning University App.png" class="card-img-top" alt="gallery 1" />
               <div class="card-body">
-                <p class="card-text">Travell App ios</p>
+                <p class="card-text">E-learning University App</p>
               </div>
             </div>
           </div>
@@ -146,6 +151,7 @@
         <div class="row text-center mb-3">
           <div class="col">
             <h2>Contact Me</h2>
+          </div>
           </div>
         </div>
         <div class="row justify-content-center">
@@ -189,6 +195,21 @@
     </footer>
     <!-- Akhir Footer-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to('.lead', {duration: 2, delay: 1.5, text: 'UI/UX Designer | WordPress' });
+      gsap.from('.jumbotron img', {duration: 1, rotateY: 360, opacity: 0, });
+      gsap.from('.navbar', {duration: 1.5, y: '-100%', opacity: 0, ease: 'bounce'});
+      gsap.from('.display-4', {duration:  1, x: 50, opacity: 0, delay: 0.5 });
+    </script>
 
     <script>
       const scriptURL = 'https://script.google.com/macros/s/AKfycbzez3BK4kRRfJTfr1Td3nNMifdxOnMB09zpMIXOO6QDSALnr1SflXcSrf48hDQ6ykuk/exec';

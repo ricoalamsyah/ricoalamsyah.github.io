@@ -7,6 +7,10 @@
   background-color: #b9dee0;
 }
 
+.gallery-img {
+  width: 1000;
+}
+
 section {
   padding-top: 5rem;
 }
